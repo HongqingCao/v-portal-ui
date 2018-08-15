@@ -4,9 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import mock from './mock/mock'
+import vportal from './components/index'
+import './assets/iconfont/iconfont.css'
+import './assets/css/base.scss'
+import './components/theme-style/index.scss'
 
 Vue.config.productionTip = false
 Vue.use(mock);
+Vue.use(vportal);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

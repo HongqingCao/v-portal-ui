@@ -1,0 +1,156 @@
+@mixin disabled($color) {
+  cursor: not-allowed;
+  background-color: mix($color, $--color-white);
+  border-color: mix($color, $--color-white);
+  color: #fff;
+  i {
+    color: #fff;
+  }
+  &:hover {
+    background-color: mix($color, $--color-white);
+    border-color: mix($color, $--color-white);
+    color: #fff;
+  }
+}
+@mixin disabledPlain($color) {
+  background-color: mix($--color-white, $color, 80%);
+  color: mix($color, $--color-white);
+  i {
+    color: mix($color, $--color-white);
+  }
+  &:hover {
+    background-color: mix($--color-white, $color, 80%);
+    color: mix($color, $--color-white);
+  }
+}
+@mixin disabledDefault {
+  cursor: not-allowed;
+  color: $--color-text-disabled;
+  border-color: $--color-disabled;
+  i {
+    color: $--color-text-disabled;
+  }
+  &:hover {
+    background-color: inherit;
+  }
+}
+@mixin button ($color: "") {
+  padding: 6px 15px;
+  font-size: 12px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  i+span {
+    margin-left: 4px;
+  }
+  @if ($color != "") {
+    background-color: $color;
+    border: 1px solid $color;
+    color: #fff;
+    i {
+      color: #fff;
+    }
+    &:hover {
+      background-color: mix($--color-white, $color, 10%);
+      color: #fff;
+      border-color: $color;
+      i {
+        color: #fff;
+      }
+    }
+    @include when(disabled) {
+      @include disabled($color);
+    }
+    @include when(loading) {
+      @include disabled($color);
+    }
+    @include when(plain) {
+      background-color: mix($--color-white, $color, 80%);
+      color: $color;
+      &:hover {
+        background-color: $color;
+        color: #fff;
+      }
+      @include when(disabled) {
+        @include disabledPlain($color);
+      }
+      @include when(loading) {
+        @include disabledPlain($color);
+      }
+    }
+  }
+  @else {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    color: #5e5e5e;
+    i {
+      color: #5e5e5e;
+    }
+    &:hover {
+      background-color: mix($--color-white, $--color-primary, 80%);
+      color: $--color-primary;
+      border-color: $--color-primary;
+      i {
+        color: $--color-primary;
+      }
+    }
+    @include when(disabled) {
+      @include disabledDefault;
+    }
+    @include when(loading) {
+      @include disabledDefault;
+    }
+  }
+}
+
+@include b(button) {
+  @include button;
+  @include m(primary) {
+    @include button($--color-primary);
+  }
+  @include m(success) {
+    @include button($--color-success);
+  }
+  @include m(warning) {
+    @include button($--color-warning);
+  }
+  @include m(danger) {
+    @include button($--color-danger);
+  }
+  @include m(info) {
+    @include button($--color-info);
+  }
+  @include m(dashed) {
+    border-style: dashed;
+  }
+  @include m(text) {
+    border-style: none;
+    color: $--color-text-primary;
+    background-color: inherit;
+    &:hover {
+      color: $--color-primary;
+      background-color: inherit;
+    }
+  }
+  @include m(large) {
+    padding: 8px 15px;
+  }
+  @include m(small) {
+    padding: 4px 10px;
+  }
+  @include m(long) {
+    width: 100%;
+  }
+  @include when(round) {
+    border-radius: 20px;
+  }
+  @include when(circle) {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 0;
+    i {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,29 +1,35 @@
 {
-  "status":"0",
-  "result":[
+  "error":0,
+  "list":[
     {
       "componentName":"导航导航",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"1"
     },
     {
       "componentName":"测试",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"2"
     },
     {
       "componentName":"头部头部头部头",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"1"
     },
     {
       "componentName":"10002",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"1"
     },
     {
       "componentName":"10002",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"1"
     },
     {
       "componentName":"10002",
-      "url":"www.baidu.com"
+      "url":"www.baidu.com",
+      "new":"1"
     }
   ]
 }

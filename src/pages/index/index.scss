@@ -7,8 +7,6 @@
 */
 .cover{
     display: flex;
-    background: rgb(240, 240, 240);
-    height: 100vh;
     align-items: center;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -20,7 +18,6 @@
         text-align: center;
         z-index: 1;
         p{
-           line-height: 1.5rem;
            margin: 1em 0;
         }
         h1{
@@ -116,42 +113,4 @@
             transition: all .15s ease;
         }
     }
-}
-.github-corner{
-    border-bottom: 0;
-    position: fixed;
-    right: 0;
-    text-decoration: none;
-    top: 0;
-    z-index: 1;
-    a{
-        display: block;
-        svg{
-            color: #fff;
-            fill: var(--theme-color,#41b663);
-            height: 80px;
-            width: 80px;
-        }
-        &:hover{
-            svg{
-                .octo-arm {
-                  animation: a .56s ease-in-out
-                }
-            }
-            @keyframes a {
-                0%,to {
-                    transform: rotate(0)
-                }
-            
-                20%,60% {
-                    transform: rotate(-25deg)
-                }
-            
-                40%,80% {
-                    transform: rotate(10deg)
-                }
-            }
-        }
-    }
-
 }

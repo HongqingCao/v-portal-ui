@@ -5,17 +5,120 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: none;
     -webkit-touch-callout: none;
-    box-sizing: border-box;
     color: #34495e;
-    font-family:YouYuan,Helvetica Neue,Arial,sans-serif;
+    font-family: "Microsoft Yahei",sans-serif;
     font-size: 15px;
     letter-spacing: 0;
     margin: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
+a{ 
+  text-decoration: none;
+  cursor:pointer;
+}
+//#app {
+//  font-size: 30px;
+//  font-weight: lighter;
+//  margin: 0 auto;
+//  text-align: center
+//}
 #app {
-    font-size: 30px;
-    font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: hidden;
+  header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1140px;
+    height: 90px;
     margin: 0 auto;
-    text-align: center
+    z-index: 9;
+    background:rgba(255,255,255,0.7);
+    span,
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      position: absolute;
+      height: 90px;
+      width: 90px;
+      line-height: 88px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      color: #5e5e5e;
+      text-decoration: none;
+      &:first-child {
+        right: 100px;
+        border-bottom: 2px solid #fe6f3d;
+      }
+      &:nth-of-type(2) {
+        right: 0;
+      }
+    }
+  }
+  .content-wrapper {
+    box-sizing: border-box;
+    width: 1140px;
+    height: 100%;
+    margin: 0px auto 0 auto;
+    padding-top: 90px;
+    overflow: auto;
+    h2 {
+      font-size: 28px;
+      &+p {
+        margin: 14px 0;
+      }
+    }
+    h3 {
+      font-size: 22px;
+      &+p {
+        margin: 14px 0;
+      }
+    }
+    section > h3 {
+      margin: 50px 0 20px;
+    }
+    > .vp-menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 240px;
+      margin-top: 90px;
+      border-right: none;
+      overflow-y: auto;
+      .vp-menu-item {
+        border-right: none;
+      }
+    }
+    .router-view {
+      box-sizing: border-box;
+      padding: 10px 0 80px 270px;
+    }
+  }
+}
+.router-view > table {
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  border-collapse: collapse;
+  thead {
+    background-color: #f7f7f7;
+    font-weight: 600;
+  }
+  th,
+  td {
+    padding: 8px 16px;
+    border: 1px solid #e4e4e4;
+    text-align: left;
+  }
+  td {
+    font-size: 14px;
+    font-family: Consolas;
+    color: #495056;
+  }
+  th {
+    min-width: 100px;
+  }
 }

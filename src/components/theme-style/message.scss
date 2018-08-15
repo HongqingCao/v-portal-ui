@@ -1,0 +1,77 @@
+@include b (message) {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  min-width: 380px;
+  top: 20px;
+  left: 50%;
+  padding: 16px;
+  background-color: mix(#fff, #fe6f3d, 80%);
+  border: 1px solid #fe6f3d;
+  border-radius: 4px;
+  color: #fe6f3d;
+  transform: translateX(-50%);
+  z-index: 1000;
+  opacity: 1;
+  transition: transform .3s, opacity .3s;
+  @include when (success) {
+    border-color: #27c24c;
+    background-color: mix(#fff, #27c24c, 80%);
+    color: #27c24c;
+  }
+  @include when (error) {
+    border-color: #ef5050;
+    background-color: mix(#fff, #ef5050, 80%);
+    color: #ef5050;
+  }
+  @include when (warning) {
+    border-color: #ff9900;
+    background-color: mix(#fff, #ff9900, 80%);
+    color: #ff9900;
+  }
+  @include when (center) {
+    justify-content: center;
+  }
+  @include e (icon) {
+    display: block;
+    margin-right: 10px;
+    font-size: 18px;
+    z-index: 1001;
+    color: #fe6f3d;
+    @include when (success) {
+      color: #27c24c;
+    }
+    @include when (error) {
+      color: #ef5050;
+    }
+    @include when (warning) {
+      color: #ff9900;
+    }
+  }
+  @include e (text) {
+    padding-right: 10px;
+    margin: 0;
+    line-height: 1;
+  }
+  @include e (close-btn) {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    margin-top: 1px;
+    cursor: pointer;
+    i {
+      color: #5e5e5e;
+    }
+    &:hover {
+      i {
+        color: #1c2438;
+      } 
+    }
+  }
+}
+.ru-message-list-enter,
+.ru-message-list-leave-active {
+  opacity: 0;
+  transform: translateY(-150%) translateX(-50%);
+}

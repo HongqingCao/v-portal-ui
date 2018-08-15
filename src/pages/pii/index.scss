@@ -1,0 +1,129 @@
+.card-box {
+    margin: 50px auto;
+    padding: 20px;
+    width: 355px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 5px 5px 30px rgba(84, 29, 29, 0.4);
+    .card-title {
+        color: #541d1d;
+        font-size: 22px;
+    }
+    .card-text {
+        margin-top: 8px;
+        line-height: 1.3;
+    }
+    .card-image {
+        margin-top: 10px;
+        
+        .image-dialog-trigger {
+            margin: 0;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .image-dialog-background {
+            overflow: auto;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            padding: 80px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            
+            .image-dialog-close {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 60px;
+                height: 60px;
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                -webkit-transition: 300ms ease-out;
+                transition: 300ms ease-out;
+                outline: none;
+                &:hover {
+                    -webkit-transform: rotate(270deg);
+                    transform: rotate(270deg);
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -0.5px;
+                    margin-left: -20px;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #000;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                 &::after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -0.5px;
+                    margin-left: -20px;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #000;
+                    -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                }
+            }
+            .image-dialog-animate{
+                display: none;
+                position: absolute;
+                -webkit-transform-origin: left top;
+                transform-origin: left top;
+                &.loading {
+                    display: block;
+                }
+            }  
+            &.dialog-leave-active {
+                -webkit-transition: background-color 300ms ease-out;
+                transition: background-color 300ms ease-out;
+                .image-dialog-animate {
+                    display: block;
+                    -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: transform 300ms cubic-bezier(1, 0, 0.7, 1), -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                }
+                .image-dialog-full {
+                      visibility: hidden;
+                    }
+            } 
+            &.dialog-enter-active{
+                -webkit-transition: background-color 300ms ease-out;
+                transition: background-color 300ms ease-out;
+                .image-dialog-animate {
+                    display: block;
+                    -webkit-transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                    transition: transform 300ms cubic-bezier(1, 0, 0.7, 1), -webkit-transform 300ms cubic-bezier(1, 0, 0.7, 1);
+                }
+                .image-dialog-full {
+                      visibility: hidden;
+                    }
+            } 
+            .dialog-leave-to {
+                    background-color: rgba(255, 255, 255, 0);
+                }
+             .dialog-enter {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+    }
+
+}

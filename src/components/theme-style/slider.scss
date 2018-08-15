@@ -1,0 +1,116 @@
+@include b(slider-wrapper) {
+  position: relative;
+  @include m(horizon) {
+    width: 90%;
+    height: 6px;
+    margin: 16px 0;
+    @include when(has-input) {
+      box-sizing: border-box;
+      padding-right: 100px;
+    }
+    @include b(dot) {
+      transform: translateX(-50%);
+      &:hover {
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+    @include when(disabled) {
+      @include b(dot) {
+        border-color: $--color-disabled;
+        cursor: not-allowed;
+        &:hover {
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .ru-slider-wrapper__input {
+      top: -13px;
+      right: 0;
+    }
+  }
+  @include m(vertical) {
+    width: 6px;
+    margin: 0 16px;
+    @include b(slider-track) {
+      bottom: 0;
+    }
+    @include when(has-input) {
+      padding-right: 100px;
+    }
+    @include b(dot) {
+      left: -7px;
+      transform: translateY(50%);
+      &:hover {
+        transform: translateY(50%) scale(1.2);
+      }
+    }
+    @include when(disabled) {
+      @include b(dot) {
+        border-color: $--color-disabled;
+        cursor: not-allowed;
+        &:hover {
+          transform: translateY(50%);
+        }
+      }
+    }
+    .ru-slider-wrapper__input {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  @include e(input) {
+    position: absolute;
+    box-sizing: border-box;
+    width: 80px;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #e4e4e4;
+    border-radius: 2px;
+  }
+  @include when(disabled) {
+    @include b(slider-track-wrapper) {
+      cursor: not-allowed;
+      @include b(slider-track) {
+        cursor: not-allowed;
+        background-color: $--color-disabled;
+      }
+    }
+  }
+}
+
+@include b(slider-track-wrapper) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  cursor: pointer;
+  @include b(slider-track) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $--color-primary;
+    z-index: 99;
+  }
+  @include b(dot) {
+    position: absolute;
+    bottom: -7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid $--color-primary;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform .2s;
+    z-index: 100;
+  }
+  @include b(break-point) {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,33 @@
+/********    fonts    ********/
+$--font-size-base: 14px !default;
+$--font-size-small: 12px !default;
+$--font-size-large: 16px !default;
+$--font-weight-base: 500 !default;
+$--font-weight-bold: 700 !default;
+$--font-weight-lighter: 300 !default;
+
+
+/********    color    ********/
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+
+$--color-primary: #41b663 !default;
+$--color-success: #27c24c !default;
+$--color-danger: #ef5050 !default;
+$--color-warning: #ff9900 !default;
+$--color-info: #a1a1a1 !default;
+$--color-disabled: #bbbec4 !default;
+
+$--color-title: #1c2438 !default;
+$--color-text-primary: #5e5e5e !default;
+$--color-text-second: #a1a1a1 !default;
+$--color-text-placeholder: #bcbcbc !default;
+$--color-text-disabled: #bbbec4 !default;
+
+/********    menu    ********/
+$--menu-item-fill: $--color-white !default;
+$--menu-item-color: $--color-text-primary !default;
+$--menu-item-dark-fill: #353e4e !default;
+
+/********    background    ********/
+$--background-color-base: #f3f3f3 !default;

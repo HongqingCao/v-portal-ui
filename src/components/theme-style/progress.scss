@@ -1,0 +1,40 @@
+@include b (progress) {
+  box-sizing: border-box;
+  margin: 10px;
+  padding-right: 40px;
+  @include e (wrapper) {
+    position: relative;
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+  @include e (track) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 100px;
+    text-align: right;
+    transition: width .3s;
+  }
+  @include e (text) {
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    margin-left: 5px;
+    i {
+      @include when (success) {
+        color: #27c24c;
+      }
+      @include when (error) {
+        color: #ef5050;
+      }
+    }
+    @include when (inside) {
+      position: static;
+      top: 0;
+      left: 0;
+      color: #fff;
+      margin: 0 5px;
+    }
+  }
+}

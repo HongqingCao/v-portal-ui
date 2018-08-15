@@ -1,0 +1,119 @@
+@import "mixins/index";
+@import "common/var";
+
+
+@mixin menu-item {
+  box-sizing: border-box;
+  position: relative;
+  height: 56px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 50px;
+  color: $--menu-item-color;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  [class^="iconfont"] {
+    width: 24px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle
+  }
+}
+@include b(menu) {
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  border-right: 1px solid #e6e6e6;
+  background-color: $--menu-item-fill;
+  @include m(vertical) {
+    & .vp-menu {
+      border-right: none;
+    }
+  }
+  @include m(dark) {
+    i,
+    .vp-submenu__title,
+    .vp-menu-item {
+      color: mix($--color-black, $--color-white, 20%);
+    }
+    background-color: mix($--color-white, $--menu-item-dark-fill, 7%);
+    .vp-menu {
+      background-color: $--menu-item-dark-fill;
+    }
+  }
+  @include c(vertical, light) {
+    .vp-submenu__title,
+    .vp-menu-item {
+      &:hover {
+        background-color: $--background-color-base;
+      }
+    }
+    .vp-menu-item,
+    .vp-submenu__title {
+      i {
+        color: #5a6b76;
+      }
+      @include when(active) {
+        color: $--color-primary;
+        border-right: 2px solid $--color-primary;
+        [class^="iconfont"] {
+          color: $--color-primary;
+        }
+      }
+    }
+  }
+  @include c(vertical, dark) {
+    .vp-submenu__title,
+    .vp-menu-item {
+      &:hover {
+        color: #fff;
+        background-color: $--menu-item-dark-fill;
+        & >i {
+          color: #fff;
+        }
+      }
+    }
+    .vp-menu-item {
+      @include when(active) {
+        color: $--color-primary;
+        [class^="icon-"] {
+          color: $--color-primary;
+        }
+      }
+    }
+  }
+}
+@include b(menu-item) {
+  @include menu-item;
+}
+@include b(submenu) {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  [class^="vp-icon-"] {
+    width: 24px;
+    margin-right: 5px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle
+  }
+  @include e(title) {
+    @include menu-item;
+    > .vp-submenu__title-icon {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      transition: transform .4s;
+      font-size: 14px;
+    }
+  }
+  @include when(open) {
+    > .vp-submenu__title .vp-submenu__title-icon {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+

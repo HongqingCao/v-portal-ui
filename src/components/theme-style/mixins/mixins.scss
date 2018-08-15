@@ -1,0 +1,44 @@
+@import '../common/var';
+@import 'config';
+
+@mixin b ($block) {
+  $blockName: #{$namespace}-#{$block};
+  .#{$blockName} {
+    @content;
+  }
+}
+
+@mixin e ($element) {
+  $selector: &;
+  @at-root {
+    #{$selector + $element-separator + $element} {
+      @content;
+    }
+  }
+}
+
+@mixin m ($modifier) {
+  $selector: &;
+  @at-root {
+    #{$selector + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin c ($firstCondition, $secondCondition) {
+  $selector: &;
+  @at-root {
+    #{$selector + $modifier-separator + $firstCondition+ $selector + $modifier-separator + $secondCondition} {
+      @content;
+    }
+  }
+}
+
+@mixin when ($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}

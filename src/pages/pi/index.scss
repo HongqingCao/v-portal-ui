@@ -1,0 +1,150 @@
+.news-wrapper {
+    width: 472px;
+    padding: 5px;
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .news-list {
+        margin: 10px 0;
+        li {
+            float: left;
+            margin-right: 5px;
+            background-color: #929292;
+
+            &.active {
+                background-color: #4b79bf;
+            }
+
+            a {
+                display: block;
+                width: 140px;
+                height: 33px;
+                line-height: 33px;
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    .news-box {
+        .news-listbox {
+            width: 460px * 3;
+            transition: all 0.5s;
+            ul {
+                float: left;
+                width: 460px;
+                li {
+                    margin-bottom: 5px;
+                    a{
+                        display: block;
+                       .news-date {
+                        float: left;
+                        width: 80px;
+                        color: #666;
+                        border-right: 2px solid #4b79bf;
+                        display: none;
+
+                        .date-day {
+                            font-size: 48px;
+                        }
+
+                        .date-year {
+                            font-size: 12px;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    .main-news {
+                        width: calc(100% - 80px);
+                        float: left;
+
+                        .newstxt-title {
+                            font-size: 14px;
+                            color: #666;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+
+                        .news-text {
+                            font-size: 14px;
+                            color: #999;
+                            text-indent: 2em;
+                            line-height: 1.6em;
+                            margin-top: 10px;
+                            display: none;
+                            height: 44px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    .time {
+                        width: 80px;
+                        font-size: 14px;
+                        color: #666;
+                    } 
+                    }
+                    
+
+                    &:first-child {
+                        margin-bottom: 13px;
+
+                        .news-date {
+                            display: block;
+                        }
+
+                        .main-news {
+                            padding: 0 15px;
+
+                            .newstxt-title {
+                                font-size: 16px;
+                                
+                            }
+
+                            .news-text {
+                                display: block;
+                            }
+                        }
+
+                        .time {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        .news-date .date-day, .news-date .date-year, .main-news .newstxt-title, .time {
+                            color: #4b79bf;
+                        }
+                    }
+                    
+                     &.more {
+                        width: 100%;
+                        justify-content: center;
+                        background: none;
+                        height: 30px;
+                        border: 0;
+
+
+                        a {
+                            display: block;
+                            float: right;
+                            box-sizing: content-box;
+                            width: 60px;
+                            padding: 1px;
+                            color: #4b79bf;
+                            
+                            &:hover{
+                                text-decoration:underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

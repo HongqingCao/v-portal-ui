@@ -1,0 +1,60 @@
+@import "var";
+
+.collapse-transition {
+  transition: .3s height ease-in-out, .3s padding-top ease-in-out, .3s padding-bottom ease-in-out,
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-weight: 400;
+  font-size: $--font-size-base;
+  color: $--color-text-primary;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+div,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+p,
+header,
+section,
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $--color-title;
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: #{$--font-size-base + 8px};
+}
+h2 {
+  font-size: #{$--font-size-base + 6px};
+}
+h3 {
+  font-size: #{$--font-size-base + 4px};
+}
+
+h4,
+h5,
+h6,
+span,
+p {
+  font-size: inherit;
+}

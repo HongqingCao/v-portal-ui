@@ -1,0 +1,158 @@
+@include b (date-picker) {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 223px;
+  height: 42px;
+  padding-left: 30px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  .ru-icon-ios-calendar-outline {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    color: #e4e4e4;
+    font-size: 25px;
+  }
+  @include e (input) {
+    box-sizing: border-box;
+    width: 190px;
+    height: 40px;
+    outline: none;
+    border: 0;
+    &::-webkit-input-placeholder {
+      color: #a1a1a1;
+    }
+  }
+  @include b (date-wrapper) {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translateY(10px);
+    border: 1px solid #e4e4e4;
+    border-radius: 2px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    z-index: 100;
+    @include b (date-options) {
+      box-sizing: border-box;
+      position: absolute;
+      width: 110px;
+      height: 100%;
+      padding-top: 10px;
+      border-right: 1px solid #e4e4e4;
+      @include e (btn) {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        border: 0;
+        outline: none;
+        background-color: #fff;
+        color: #5e5e5e;
+        text-align: left;
+        cursor: pointer;
+        &:hover {
+          color: #fe6f3d;
+        }
+      }
+    }
+    @include b (date-panel) {
+      box-sizing: border-box;
+      width: 320px;
+      padding: 10px;
+      z-index: 100;
+      @include when (show-options) {
+        width: 431px;
+        padding-left: 121px;
+      }
+      @include e (header) {
+        border-bottom: 1px solid #e4e4e4;
+      }
+      @include e (options) {
+        text-align: center;
+        margin-bottom: 15px;
+        span {
+          display: inline-block;
+          text-align: center;
+          cursor: pointer;
+          &:hover {
+            color: #fe6f3d;
+          }
+        }
+        .arrow {
+          width: 20px;
+        }
+      }
+      @include e (year) {
+        width: 55px;
+        font-size: 16px;
+        margin-left: 50px;
+      }
+      @include e (month) {
+        width: 40px;
+        font-size: 16px;
+        margin-right: 50px;
+      }
+      @include e (double-arrow-left) {
+        letter-spacing: -2px;
+        .ios-arrow-left {
+          letter-spacing: 0;
+        }
+      }
+      @include e (double-arrow-right) {
+        letter-spacing: -2px;
+        .ios-arrow-right {
+          letter-spacing: 0;
+        }
+      }
+      @include e (weekday) {
+        letter-spacing: -4px;
+        font-size: 12px;
+        span {
+          display: inline-block;
+          box-sizing: border-box;
+          width: 42px;
+          height: 42px;
+          padding: 5px;
+          line-height: 30px;
+          text-align: center;
+          letter-spacing: 0;
+        }
+      }
+      @include e (body) {
+        margin-top: 10px;
+        letter-spacing: -4px;
+        span {
+          display: inline-block;
+          box-sizing: border-box;
+          width: 42px;
+          height: 42px;
+          padding: 5px;
+          line-height: 30px;
+          text-align: center;
+          letter-spacing: 0;
+          @include when (disabled) {
+            color: #e4e4e4;
+          }
+          .ru-date-panel__item {
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            cursor: pointer;
+            line-height: 24px;
+            border-radius: 50%;
+            &:hover {
+              background-color: mix($--color-white, $--color-primary, 50%);
+              color: #fff;
+            }
+            @include when(active) {
+              background-color: $--color-primary;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

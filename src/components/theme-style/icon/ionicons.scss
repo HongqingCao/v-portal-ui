@@ -1,0 +1,30 @@
+@import "ionicons-variables";
+@import "ionicons-font";
+@import "ionicons-icons";
+
+[class*=" ru-icon-"],
+[class^="ru-icon-"] {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+
+.ru-icon-loop,
+.ru-icon-load-a,
+.ru-icon-load-b,
+.ru-icon-load-c,
+.ru-icon-load-d,
+.ru-icon-ios-loop-strong,
+.ru-icon-ios-loop, {
+  transform-origin: center center;
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

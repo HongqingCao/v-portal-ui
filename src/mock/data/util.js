@@ -12,7 +12,7 @@
 //import path from  'path';
 const fs = require('fs');
 const path = require('path');//引入path模块
- console.log(fs.readFile)
+
 module.exports = {
     //读取json文件
 getJsonFile:function (filePath) {
