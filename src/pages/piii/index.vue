@@ -8,7 +8,7 @@
 <template>
 	<wapper>
 		<description 
-			title="P1.轮播图" 
+			title="P3.轮播图" 
 			introduce="1、支持浏览器任意放缩，兼容移动端，2、支持自动切换，鼠标经过停止切换，分页/任意页点击切换，左右切换，3、支持文字介绍"
 			principle="未编辑"
 			>

@@ -17,7 +17,7 @@
 	               <p><strong>基于Vue的门户网站UI组件</strong></p>
 				</blockquote>
 			    <p>
-			    	<a href="https://github.com/HongqingCao" target="_blank" class="github">GitHub</a>
+			    	<a href="https://github.com/HongqingCao/vue-portal-webUI" target="_blank" class="github">GitHub</a>
 	                <a href="#/pi" class="getstart">Get Started</a>
 			    </p>
 			</div>

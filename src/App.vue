@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-  	<github :paths="'https://github.com/HongqingCao'"></github>
+  	<github :paths="'https://github.com/HongqingCao/vue-portal-webUI'"></github>
     <div class="content-wrapper">
        <VpMenu :uniqueOpen="true" :router="true" activeName="index">
           <VpSubmenu name="components">
           <template slot="title">
-                                      组件列表
+                         组件列表
           </template>
           <VpMenuItem :name="'index'">首页</VpMenuItem>
           <VpMenuItem :name="'pi'">P1.新闻选项卡</VpMenuItem>
