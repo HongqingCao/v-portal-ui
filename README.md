@@ -7,7 +7,8 @@ P2.平滑放大效果
 P3.轮播图
 P4.检索即时过滤功能
 P5.爱心点赞
-
+....
+（持续更新...）
 
 ## Build Setup
 
@@ -25,7 +26,7 @@ npm run build
 npm test
 ```
 
-
+``` bash
 ├── README.md            项目介绍
 ├── index.html           入口页面
 ├── build              构建脚本目录
@@ -59,3 +60,4 @@ npm test
 │    ├── hello.vue
 │    └── notfound.vue
 ├── static             纯静态资源，不会被wabpack构建。
+```
