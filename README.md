@@ -1,14 +1,18 @@
 # vue-portal-webUI
 基于Vue的门户网站UI组件
 
-目前更新的有：
-P1.新闻选项卡滑动
-P2.平滑放大效果
-P3.轮播图
-P4.检索即时过滤功能
-P5.爱心点赞
+## 目前更新的有： 
+P1.新闻选项卡滑动  
+P2.平滑放大效果  
+P3.轮播图  
+P4.检索即时过滤功能  
+P5.爱心点赞  
 ....
 （持续更新...）
+
+> 在线查看效果  
+
+[点击进入](https://hongqingcao.github.io/vue-portal-webUI/#/)
 
 ## Build Setup
 
