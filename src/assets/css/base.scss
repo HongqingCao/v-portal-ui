@@ -89,6 +89,7 @@ a{
       margin-top: 90px;
       border-right: none;
       overflow-y: auto;
+	  z-index: 99999;
       .vp-menu-item {
         border-right: none;
       }
