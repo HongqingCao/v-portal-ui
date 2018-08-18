@@ -6,6 +6,7 @@ import pii from '@/pages/pii/index'
 import piii from '@/pages/piii/index'
 import piv from '@/pages/piv/index'
 import pv from '@/pages/pv/index'
+import pvi from '@/pages/pvi/index'
 Vue.use(Router)
 
 export default new Router({
@@ -44,6 +45,11 @@ export default new Router({
       path: '/pv',
       name: 'pv',
       component: pv
+    },
+    {
+      path: '/pvi',
+      name: 'pvi',
+      component: pvi
     }
   ]
 })
