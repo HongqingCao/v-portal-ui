@@ -6,8 +6,9 @@ P1.新闻选项卡滑动
 P2.平滑放大效果  
 P3.轮播图  
 P4.检索即时过滤功能  
-P5.爱心点赞 
+P5.爱心点赞   
 P6.粒子动效
+P7.滚动新闻  
 ....
 （持续更新...）
 
@@ -15,7 +16,7 @@ P6.粒子动效
 
 [点击进入](https://hongqingcao.github.io/vue-portal-webUI/#/)
 
-## Build Setup
+## 构建和设置
 
 ``` bash
 # install dependencies
