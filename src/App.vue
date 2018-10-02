@@ -15,6 +15,7 @@
           <VpMenuItem :name="'pv'">P5.点赞功能</VpMenuItem>
           <VpMenuItem :name="'pvi'">P6.粒子动效</VpMenuItem>
           <VpMenuItem :name="'pvii'">P7.循环滚动新闻</VpMenuItem>
+          <VpMenuItem :name="'pviii'">P8.日历</VpMenuItem>
         </VpSubmenu>
       </VpMenu>
       <router-view class="router-view"/>
